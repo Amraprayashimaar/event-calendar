@@ -1,8 +1,20 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Overview
+A React-based app to manage daily events with features like adding, editing, deleting, and drag-and-drop events. Includes light/dark mode and data persistence via localStorage.
 
-Currently, two official plugins are available:
+Features
+Add, edit, delete events.
+Drag-and-drop functionality.
+Light/dark mode toggle.
+Persistent storage with localStorage.
+Responsive design.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Live Demo
+Event Calendar App
+https://event-calendar-ivory.vercel.app/
+
+Technologies Used
+React: User interface.
+react-beautiful-dnd: Drag-and-drop.
+CSS: Styling.
+localStorage: Data persistence.
