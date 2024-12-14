@@ -1,0 +1,226 @@
+
+/* Global styles */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f0f4f7;
+ 
+}
+
+/* App container */
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f4f7;
+  min-height: 100vh;
+}
+
+/* Header section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #3498db;
+  color: white;
+  border-radius: 8px;
+}
+
+.mode-toggle {
+  padding: 10px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.mode-toggle:hover {
+  background-color: #ecf0f1;
+}
+
+/* Calendar container */
+.calendar-container {
+  display:flex;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1200px;
+  margin-top: 30px;
+}
+
+/* Calendar grid layout */
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); 
+  gap: 1px; /* Small gap between days */
+  background-color: #e3dbdb;
+  border-radius: 8px;
+  padding: 1px;
+  border: 2px solid whitesmoke;
+  
+}
+
+/* Day and date styling */
+.calendar-day {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #869da2;
+  border: 1px solid #ddd; 
+  padding: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.calendar-day:hover {
+  background-color: #dfe6e9;
+  transform: scale(1.05);
+}
+
+.calendar-day.selected {
+  background-color: #3498db;
+  color: white;
+  font-weight: bold;
+}
+
+.calendar-day.has-events {
+  background-color: #a4deff;
+}
+
+/* Event display inside the calendar day */
+.day-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Event card styling */
+.event {
+  padding: 8px;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+}
+
+.event.Work { background-color: #f39c12; }
+.event.Personal { background-color: #e74c3c; }
+.event.Other { background-color: #2ecc71; }
+
+/* Modal styling */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 450px;
+}
+
+.modal input,
+.modal textarea,
+.modal select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 16px;
+  transition: border 0.3s ease;
+}
+
+.modal input:focus,
+.modal textarea:focus,
+.modal select:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.modal button {
+  width: 100%;
+  padding: 12px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.modal button:hover {
+  background-color: #2980b9;
+}
+
+/* Event list styling */
+.event-list {
+  flex: 1;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.event-list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.event-list li {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+}
+
+.event-list button {
+  background-color: #e74c3c;
+  color: white;
+  padding: 5px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.event-list button:hover {
+  background-color: #c0392b;
+}
+
+/* Light/Dark Mode */
+body.light {
+  background-color: #3a4045;
+}
+
+body.dark {
+  background-color: #101b27;
+  color: white;
+}
+
+body.dark .header {
+  background-color: #101b27;
+}
+
+body.dark .calendar-day,
+body.dark .modal,
+body.dark .event-list {
+  background-color: #101b27;
+  color: white;
+}
+
+body.dark .mode-toggle {
+  background-color: #d6dbe1;
+}
